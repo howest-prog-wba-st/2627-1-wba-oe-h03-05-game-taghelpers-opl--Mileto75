@@ -15,15 +15,8 @@
             <dt>Name</dt>
             <dd>@Model.Name</dd>
         </dl>
-        <div class="list-group">
-            @foreach (var game in Model.Games)
-            {
-                <a class="list-group-item" 
-                   asp-action="showgame" 
-                   asp-controller="games" 
-                   asp-route-id="@game.Id">@game.Title</a>
-            }
-        </div>
+        @* call the gamesListpartial *@
+        <partial name="_GameListPartial" model="@Model.Games" />
     </div>
 </div>
 

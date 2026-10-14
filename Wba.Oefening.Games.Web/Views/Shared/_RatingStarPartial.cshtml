@@ -1,0 +1,12 @@
+﻿@model int?
+@for (int star = 1; star <= 5; star++)
+{
+    if (star <= Model)
+    {
+        <span class="fas fa-star" aria-hidden="true"></span>
+    }
+    else
+    {
+        <span class="far fa-star" aria-hidden="true"></span>
+    }
+}

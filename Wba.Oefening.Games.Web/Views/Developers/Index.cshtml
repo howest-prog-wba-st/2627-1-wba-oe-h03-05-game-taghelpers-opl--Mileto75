@@ -1,0 +1,16 @@
+﻿@model DevelopersIndexViewModel
+@{
+    ViewData["Title"] = "Developers";
+}
+
+<h2>Developers</h2>
+
+<div class="list-group">
+    @foreach (var developer in Model.Developers)
+    {
+        <a class="list-group-item" 
+           asp-action="showdeveloper"
+           asp-controller="developers"
+           asp-route-id="@developer.Id">@developer.Name</a>
+    }
+</div>
